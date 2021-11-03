@@ -202,9 +202,19 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(array) {
     /* code here */
+    let newArray=[];
+
+    for(let i=0;i<array.length; i++){
+      if(array[i].feedback.split(' ').length > 15 ){
+        newArray.push(array[i]);
+      }
+    }
+    return newArray;
   }
+
+  console.log(getLongReviews(reviews));
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
