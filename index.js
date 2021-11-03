@@ -114,7 +114,7 @@ function addReview(array, name, rating, feedback){
   const movieObj= {};
   movieObj['name']=name;
   movieObj['rating']=rating;
-  movieObj['review']=feedback;
+  movieObj['feedback']=feedback;
   array.push(movieObj);
   return array;
 }
@@ -132,11 +132,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(array, index) {
   /*Your code here*/
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`;
 }
 
-
+console.log(getReviewByIndex(reviews,0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
